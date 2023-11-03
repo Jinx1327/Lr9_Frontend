@@ -5,7 +5,14 @@ let tryes = 0; // Змінна для відстеження кількості 
 let winerText; // Змінна для зберігання тексту переможця
 
 function startGame() {
-    userName = prompt("Введіть своє ім'я:");
+    let userInput = prompt("Введіть своє ім'я:");
+        if (userInput === null || userInput === "") {
+        // Якщо введено пустий рядок або вибрано "Cancel", встановіть ім'я за замовчуванням
+        userName = "User";
+    } else {
+        // Якщо користувач ввів ім'я, встановіть його
+        userName = userInput;
+    }
     const nameOfUser = document.getElementById('nameOfUser');
     nameOfUser.innerHTML = userName;
 }
