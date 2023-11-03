@@ -8,7 +8,7 @@ function startGame() {
     let userInput = prompt("Введіть своє ім'я:");
         if (userInput === null || userInput === "") {
         // Якщо введено пустий рядок або вибрано "Cancel", встановіть ім'я за замовчуванням
-        userName = "User";
+        userName = "User ";
     } else {
         // Якщо користувач ввів ім'я, встановіть його
         userName = userInput;
